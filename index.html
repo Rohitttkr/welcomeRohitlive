@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script> 
+    
+    // index.html ki script se pehle ise include karein
+(function() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+    if (!isLoggedIn || isLoggedIn !== 'true') {
+        // Agar user logged in nahi hai, toh login page par fek do
+        window.location.href = 'login.html';
+    }
+})();
+
+// Logout Function (Ise player page ke logout button par call karein)
+function logout() {
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('user');
+    window.location.href = 'login.html';
+}
+    
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ads Free Spotify Clone By Rohit king</title>
