@@ -3,19 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohit - Portfolio</title>
-    <style>
-        h1 {
-            color: rgb(73, 73, 238);
-            font-family: Arial, sans-serif;
-            margin-top: 20%;
-            font-weight: bold;
-        }
-    </style>
+    <title>Spotify Clone - Music Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <center>
-        <h1>WELCOME TO ROHIT'S PORTFOLIO</h1>
-    </center>
+
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo"><i class="fab fa-spotify"></i> Spotify API</div>
+            <ul>
+                <li class="active"><i class="fas fa-home"></i> Home</li>
+                <li><i class="fas fa-search"></i> Search</li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="search-section">
+                <h1>Find your favorite music</h1>
+                <div class="search-box">
+                    <input type="text" id="songInput" placeholder="What do you want to listen to?">
+                    <button id="searchBtn">Search</button>
+                </div>
+            </div>
+
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+                <p>Fetching your vibe...</p>
+            </div>
+
+            <div id="errorMessage" class="error-msg hidden"></div>
+
+            <div id="songCard" class="song-card hidden">
+                <div class="card-inner">
+                    <img id="songThumb" src="" alt="Thumbnail">
+                    <div class="song-info">
+                        <h2 id="songTitle">Song Title</h2>
+                        <p>YouTube Stream</p>
+                        
+                        <div class="audio-container">
+                            <audio id="audioPlayer" controls></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
