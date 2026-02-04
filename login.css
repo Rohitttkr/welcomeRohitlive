@@ -1,0 +1,94 @@
+:root {
+    --spotify-green: #1DB954;
+    --spotify-black: #000000;
+    --spotify-dark-grey: #121212;
+    --error-red: #e91429;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+body {
+    background-color: var(--spotify-black);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+}
+
+.login-container { width: 100%; max-width: 450px; text-align: center; }
+
+.logo { font-size: 40px; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.logo i { color: white; }
+
+.divider { border: 0.1px solid #292929; margin-bottom: 32px; }
+
+.login-card h1 { font-size: 28px; font-weight: 900; margin-bottom: 20px; letter-spacing: -1px; }
+
+/* Error Styling */
+.error-message {
+    background-color: var(--error-red);
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.hidden { display: none; }
+
+/* Input Styling */
+.input-group { text-align: left; margin-bottom: 16px; }
+.input-group label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #121212;
+    border: 1px solid #727272;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+input:focus { border-color: white; outline: none; }
+
+/* Actions */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+.remember-me { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #b3b3b3; }
+
+#loginBtn {
+    background-color: var(--spotify-green);
+    border: none;
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#loginBtn:hover { transform: scale(1.04); background-color: #1ed760; }
+
+.card-divider { border: 0.1px solid #292929; margin: 32px 0; }
+.no-account { font-weight: 700; font-size: 18px; margin-bottom: 20px; }
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #727272;
+    color: #727272;
+    width: 100%;
+    padding: 14px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+}
