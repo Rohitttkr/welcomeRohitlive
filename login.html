@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Spotify</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="logo">
+            <i class="fab fa-spotify"></i>
+            <span>Spotify</span>
+        </div>
+
+        <hr class="divider">
+
+        <div class="login-card">
+            <h1>To continue, log in to Spotify.</h1>
+            
+            <div id="error-box" class="error-message hidden">
+                <i class="fas fa-exclamation-circle"></i>
+                <span id="error-text">Incorrect username or password.</span>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Email address or username</label>
+                    <input type="text" id="username" placeholder="Email address or username" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+
+                <div class="actions">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <button type="submit" id="loginBtn">LOG IN</button>
+                </div>
+            </form>
+
+            <hr class="card-divider">
+            
+            <p class="no-account">Don't have an account?</p>
+            <button class="secondary-btn">SIGN UP FOR SPOTIFY</button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
