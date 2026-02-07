@@ -10,7 +10,7 @@ const songThumb = document.getElementById('songThumb');
 const songTitle = document.getElementById('songTitle');
 const audioPlayer = document.getElementById('audioPlayer');
 
-const API_ENDPOINT = "https://test234ing12346722.onrender.com/api/search/"; // Change this to your live URL later
+const API_ENDPOINT = "http://127.0.0.1:8000/api/search/"; // Change this to your live URL later
 
 searchBtn.addEventListener('click', async () => {
     const songName = songInput.value.trim();
